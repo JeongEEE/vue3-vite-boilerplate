@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-defineProps<{ msg: string }>()
-
-const count = ref(0)
-</script>
-
 <template>
   <h1>{{ msg }}</h1>
   <v-col class="ma-0 pa-0" cols="12">Hello</v-col>
@@ -31,7 +23,26 @@ const count = ref(0)
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
-<style scoped>
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+export default defineComponent({
+  components: {
+		
+	},
+  props: {
+		msg: {
+			type: String, default: ''
+		}
+	},
+  setup() {
+    const count = ref(0)
+
+    return { count }
+  }
+})
+</script>
+
+<style lang="scss" scoped>
 .read-the-docs {
   color: #888;
 }

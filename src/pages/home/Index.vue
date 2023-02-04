@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HelloWorld from '../../components/HelloWorld.vue';
+import HelloWorld from '@/components/HelloWorld.vue';
 export default defineComponent({
   components: {
 		HelloWorld
@@ -25,7 +25,7 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .logo {
   height: 6em;
   padding: 1.5em;
