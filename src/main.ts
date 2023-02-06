@@ -15,13 +15,10 @@ const vuetify = createVuetify({
   directives,
 })
 
-import { VueQueryPlugin } from "vue-query";
-
 const pinia = createPinia()
 const app = createApp(App)
 
 app.use(router)
 app.use(pinia)
 app.use(vuetify)
-app.use(VueQueryPlugin)
 app.mount('#app')
